@@ -8,13 +8,13 @@ randomize()
 proc generateKemomimi(length:int): string =
   var kemomimi: seq[string] = @[]
   result = ""
-  for i in 0..length:
+  for i in 0..<length:
     let r = rand(40)
-    if r <= 10:
+    if r < 10:
       kemomimi.add("け")
-    elif r <= 20:
+    elif r < 20:
       kemomimi.add("も")
-    elif r <= 40:
+    elif r < 40:
       kemomimi.add("み")
   for ch in kemomimi:
     result = result & ch
